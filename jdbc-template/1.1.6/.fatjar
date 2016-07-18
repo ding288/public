@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Mon Jul 04 10:46:58 CST 2016
+onejar.license.required=true
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=false
+jarname=jdbc-template-1.1.6.jar
+manifest.mergeall=true
+manifest.mainclass=
+manifest.file=<createnew>
+jarname.isextern=false
+onejar.expand=
+excludes=
+includes=
