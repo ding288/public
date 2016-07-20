@@ -298,9 +298,7 @@ public class JdbcTemplate {
 	}
 
 	/**
-	 * @Remark execute sql transition. Before performing a first adjustment
-	 *         startTransition() method ,calls commitTransition() method after
-	 *         execution.
+	 * @Remark execute sql transition.
 	 */
 	public boolean executeWithTransaction(List<String> sqls) {
 		boolean b = true;
