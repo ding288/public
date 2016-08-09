@@ -12,10 +12,10 @@ import javax.xml.bind.Unmarshaller;
  *
  */
 public class JaxbUtil {
-	public static Object xml2pojo(String xml) {
+	public static Object xml2pojo(String xml,Class<?> targetClass) {
 		Object o = null;
 		try {
-			JAXBContext jaxbContext = JAXBContext.newInstance();
+			JAXBContext jaxbContext = JAXBContext.newInstance(targetClass);
 			Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 			o = jaxbUnmarshaller.unmarshal(new StringReader(xml));
 		} catch (JAXBException e) {
