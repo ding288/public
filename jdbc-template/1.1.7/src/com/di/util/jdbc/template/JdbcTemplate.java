@@ -366,11 +366,11 @@ public class JdbcTemplate {
 					} else {
 						idName = f.getName();
 					}
-				} else if (f.isAnnotationPresent(Column.class)) {
-					sql.append(f.getAnnotation(Column.class).name()).append("='").append(f.get(o)).append("',");
 				} else if (f.isAnnotationPresent(JoinColumn.class) && f.isAnnotationPresent(ManyToOne.class)) {
 				} else if (f.isAnnotationPresent(OneToMany.class)) {
 				} else if (f.isAnnotationPresent(Transient.class)) {
+				} else if (f.isAnnotationPresent(Column.class)) {
+					sql.append(f.getAnnotation(Column.class).name()).append("='").append(f.get(o)).append("',");
 				} else {
 					sql.append(f.getName()).append("='").append(f.get(o)).append("',");
 				}
